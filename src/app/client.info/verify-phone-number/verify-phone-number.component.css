@@ -1,0 +1,70 @@
+#text {
+  background-color: snow;
+  padding: 1rem;
+  font-family: monospace;
+  font-style: oblique;
+  font-weight: bold;
+  width: 30rem;
+  color: darkblue;
+}
+
+.verify {
+  padding: 1rem;
+  margin: 0 1rem 1rem;
+  width: 30rem;
+}
+
+input {
+  width: 30rem;
+  padding: 0.4rem;
+
+}
+
+button { margin-top: 1rem;}
+
+label {
+  color: white;
+}
+
+#reload {
+  color: darkblue;
+  font-family: serif;
+  font-size: 2rem;
+  font-style: italic;
+  width: max-content;
+}
+
+#reload:hover {
+  color: blueviolet;
+  cursor: pointer;
+}
+
+input[placeholder] {
+  font-style: italic;
+}
+
+.verifyErr {
+  color: red;
+  background-color: snow;
+  font-weight: bold;
+  padding: .7rem .9rem;
+}
+
+input[type=checkbox] {
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  transform: scale(2);
+  margin-left: 3rem;
+  font-size: 2rem;
+  padding: 0.4rem;
+  width: 3rem;
+}
+.custom-control-label {
+  font-family: monospace;
+  font-variant: all-petite-caps;
+  font-size: 1.7rem;
+  color: indigo;
+}

@@ -1,0 +1,29 @@
+
+<div class="form-complect" *ngIf="client">
+
+  <form [formGroup]="myForm" class="form-style">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input class="form-control" [(ngModel)]="client.name" id="name" formControlName="name">
+      <div *ngIf="myForm.controls.name.invalid && myForm.controls.name.touched" class="invalid-field">
+        Name is required!<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Warning_icon.svg/420px-Warning_icon.svg.png">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input class="form-control" [(ngModel)]="client.email" id="email" type="email" formControlName="email">
+      <div *ngIf="myForm.controls.email.invalid && myForm.controls.email.touched" class="invalid-field">
+        Invalid Email!<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Warning_icon.svg/420px-Warning_icon.svg.png">
+      </div>
+    </div>
+      <div class="form-group" *ngFor="let phone of client.phones; let i = index">
+        <label>Phone</label>
+        <input class="form-control" [(ngModel)]="client.phones[i]" [ngModelOptions]="{standalone: true}"/>
+      </div>
+    <div>
+      <button  class="btn btn-block btn-default" [disabled]="myForm.invalid"
+               (click)="saveUser()">Save</button>
+      <button (click)="back()" class="btn btn-block btn-default" >Back to shop</button>
+    </div>
+  </form>
+</div>

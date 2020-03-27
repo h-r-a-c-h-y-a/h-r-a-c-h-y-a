@@ -1,0 +1,68 @@
+<div class="form-complect">
+  <div class="regErr" *ngIf="isFailed">
+    {{errorMessage}}
+  </div>
+  <div id="firebaseui-auth-container">
+    <form [formGroup]="clientForm" class="form-style">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input class="form-control" id="name" formControlName="name">
+        <div *ngIf="clientForm.controls.name.invalid && clientForm.controls.name.touched" class="invalid-field">
+          Name is required!<img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Warning_icon.svg/420px-Warning_icon.svg.png">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input class="form-control" id="email" type="email" formControlName="email">
+        <div *ngIf="clientForm.controls.email.invalid && clientForm.controls.email.touched" class="invalid-field">
+          Invalid Email!<img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Warning_icon.svg/420px-Warning_icon.svg.png">
+        </div>
+      </div>
+      <div formArrayName="phones">
+        <div class="form-group" *ngFor="let phone of clientForm.controls['phones'].controls; let i = index">
+          <label>Phone</label>
+          <input class="form-control" formControlName="{{i}}"/>
+        </div>
+        <div class="invalid-field"
+             *ngIf=" clientForm.controls['phones'].controls[0].invalid && clientForm.controls['phones'].controls[0].touched ">
+          Incorrect Telephone!<img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Warning_icon.svg/420px-Warning_icon.svg.png">
+        </div>
+        <button class="btn btn-default" (click)="addPhone()">
+          Add Telephone
+        </button>
+        <button class="btn btn-default" (click)="deletePhone()">
+          Delete Telephone
+        </button>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input class="form-control" id="password" type="password" formControlName="password" #password>
+        <div *ngIf="clientForm.controls.password.invalid && clientForm.controls.password.touched" class="invalid-field">
+          Requirements: at least one lowercase character, at least one uppercase character, at least one
+          number, length min 8 character!<img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Warning_icon.svg/420px-Warning_icon.svg.png">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="confirm">Confirm Password:</label>
+        <input class="form-control" id="confirm" type="password" formControlName="confirmPassword" #confpass>
+        <div *ngIf="clientForm.controls.confirmPassword.invalid && clientForm.controls.confirmPassword.touched"
+             class="invalid-field">
+          Passwords does not match!<img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Warning_icon.svg/420px-Warning_icon.svg.png">
+        </div>
+      </div>
+      <div>
+        <button class="btn btn-block btn-default" id="sign-in"
+                [disabled]="clientForm.invalid  || !confirm(password.value, confpass.value)"
+                (click)="register()">Register
+        </button>
+        <button routerLink="/login" class="btn btn-block btn-default">Login</button>
+      </div>
+    </form>
+  </div>
+</div>

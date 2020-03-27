@@ -1,0 +1,83 @@
+.regErr{
+  color: red;
+  background-color: snow;
+  font-weight: bold;
+  padding: .7rem .9rem;
+}
+.invalid-field {
+  opacity: .7;
+  padding: .7rem .9rem;
+  background-color: lightyellow;
+  font-weight: bold;
+  color: red;
+  max-width: 30rem;
+}
+.invalid-field img {
+  width: 20px;
+  margin-left: 20px;
+}
+
+.form-control{
+  width: 100%;
+  font-size: 20px;
+  max-width: 500px;
+  margin-bottom: 30px;
+
+}
+
+.form-control input {
+  font-size: 20px;
+}
+
+.form-group {
+  margin: 0 auto;
+  color: white;
+}
+
+h2 {
+  font-family: Roboto, serif;
+  text-align: center;
+}
+
+.form-complect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px ;
+  margin: 25px 50px ;
+}
+.form-style {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.socialpages {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: stretch;
+  background-color: azure;
+  opacity: 0.9;
+  padding: 0  0  2rem 0;
+  border-radius: 5%;
+}
+
+#guest {
+  background-color: snow;
+  text-align: center;
+}
+#guest img {
+  width: 4.4rem;
+  margin: 1.2rem 0;
+}
+
+#guest img:hover {
+  border: navy solid 2px;
+
+}
+
+

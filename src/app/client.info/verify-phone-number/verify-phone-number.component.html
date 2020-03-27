@@ -1,0 +1,21 @@
+<!-- Add two inputs for "phoneNumber" and "code" -->
+<div class="verify"><p id="text">A confirmation code has been sent to your phone number. Please indicate confirming that it is</p>
+  <form [formGroup]="formGroup">
+    <input disabled [(ngModel)]="client.phones[0]" [ngModelOptions]="{standalone: true}"/><br>
+    <input  type="text" [(ngModel)]="code" formControlName="code" placeholder="Confirmation code"/><br>
+<div class="verifyErr" *ngIf="errorMessage">{{errorMessage}}</div>
+  <!-- Add two buttons to submit the inputs -->
+
+    <button [disabled]="formGroup.invalid" id="confirm-code" (click)="confCode()">
+      CONFIRM CODE
+    </button>
+      <input type="checkbox" class="custom-control-input" id="defaultChecked2" checked>
+      <label title="remember me after closing the tab" class="custom-control-label" for="defaultChecked2">Remember me</label>
+  </form>
+  <!-- Add a container for reCaptcha -->
+  <div id="recaptcha-container"></div>
+<!--  <p id="reload" (click)="getCodeAgain()">get the code again</p>-->
+  <!-- Add the latest firebase dependecies from CDN -->
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
+</div>

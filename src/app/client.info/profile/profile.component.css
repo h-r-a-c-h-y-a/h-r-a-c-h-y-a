@@ -1,0 +1,22 @@
+.profile {
+  width: 11.2rem;
+  background-color: snow;
+  opacity: .6;
+}
+
+.profile img {
+  width: 5rem;
+  opacity: .8;
+}
+
+.profile button {
+  font-weight: inherit;
+  font-size: 2rem;
+  font-family: Roboto, "Helvetica Neue", sans-serif ;
+  font-style: italic;
+}
+
+.menu-bar {
+  background-color: snow;
+  opacity: .7;
+}

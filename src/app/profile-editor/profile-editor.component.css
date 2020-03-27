@@ -1,0 +1,48 @@
+.invalid-field {
+  opacity: .7;
+  padding: .7rem .9rem;
+  background-color: lightyellow;
+  font-weight: bold;
+  color: red;
+}
+
+.invalid-field img {
+  width: 20px;
+  margin-left: 20px;
+}
+
+.form-control{
+  width: 100%;
+  font-size: 20px;
+  max-width: 500px;
+  margin-bottom: 30px;
+
+}
+
+.form-control input {
+  font-size: 20px;
+}
+
+.form-group {
+  margin: 0 auto;
+  color: white;
+}
+
+h2 {
+  font-family: Roboto, serif;
+  text-align: center;
+}
+
+.form-complect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px ;
+  margin: 25px 50px ;
+}
+.form-style {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 20px;
+}

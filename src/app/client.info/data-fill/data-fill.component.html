@@ -1,0 +1,49 @@
+<div class="fill-form">To complete the registration, please indicate the missing data
+  <form [formGroup]="clientForm" class="form-style">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input [attr.disabled]="client.name !== null" class="form-control" [(ngModel)]="client.name" id="name" formControlName="name">
+      <div *ngIf="clientForm.controls.name.invalid && clientForm.controls.name.touched" class="invalid-field">
+        Name is required!
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Warning_icon.svg/420px-Warning_icon.svg.png">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input [attr.disabled]="client.email !== null" [(ngModel)]="client.email" class="form-control" id="email" type="email" formControlName="email">
+      <div *ngIf="clientForm.controls.email.invalid && clientForm.controls.email.touched" class="invalid-field">
+        Invalid Email!
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Warning_icon.svg/420px-Warning_icon.svg.png">
+      </div>
+    </div>
+    <div *ngIf="!client.phones[0]" formArrayName="phones">
+      <div class="form-group" *ngFor="let phone of clientForm.controls['phones'].controls; let i = index">
+        <label>Phone</label>
+        <input  class="form-control" formControlName="{{i}}"/>
+      </div>
+      <div class="invalid-field"
+           *ngIf=" clientForm.controls['phones'].controls[0].invalid && clientForm.controls['phones'].controls[0].touched ">
+        Incorrect Telephone!
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Warning_icon.svg/420px-Warning_icon.svg.png">
+      </div>
+      <button class="btn btn-default" (click)="addPhone()">
+        Add Telephone
+      </button>
+      <button class="btn btn-default" (click)="deletePhone()">
+        Delete Telephone
+      </button>
+    </div>
+    <div *ngIf="client.phones[0]">
+      <div class="form-group" *ngFor="let phone of client.phones; let i = index">
+        <label>Phone</label>
+        <input disabled [(ngModel)]="client.phones[i]" class="form-control" formControlName="{{i}}"/>
+      </div>
+    </div>
+    <div>
+      <button class="btn btn-block btn-default"
+              [disabled]="clientForm.invalid"
+              (click)="register()">Register
+      </button>
+    </div>
+  </form>
+</div>

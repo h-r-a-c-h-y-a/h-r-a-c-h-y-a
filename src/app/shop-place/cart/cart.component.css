@@ -1,0 +1,44 @@
+.content {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0.9rem;
+}
+
+.container {
+  margin-top: 1rem;
+  color: navy;
+  font-style: italic;
+  font-weight: bold;
+  font-family: "Droid Sans", sans-serif;
+  background-color: snow;
+  opacity: .7;
+}
+
+.table{
+  opacity: 0.7;
+  background-color: snow;
+  padding: 0.7rem;
+  margin-bottom: 0;
+}
+
+.checkout{
+  width: 17rem;
+  background-color: snow;
+  opacity: .8;
+  font-size: 2.3rem;
+  font-family: Cambria sans-serif;
+  border: .1rem solid darkslategrey;
+  padding-left: .4rem;
+  float: right;
+}
+
+.checkout:hover {
+  background-color: lightcyan;
+  cursor: pointer;
+  border: none;
+}
+
+.checkout img {
+  width: 5.8rem;
+  opacity: .8;
+}

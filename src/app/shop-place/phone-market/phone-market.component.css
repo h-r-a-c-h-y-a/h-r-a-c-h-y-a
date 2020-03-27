@@ -1,0 +1,41 @@
+.content {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0.9rem;
+}
+.form{
+  opacity: 0.7;
+  background-color: snow;
+  padding: 0.7rem;
+}
+.demo{
+  opacity: 0.7;
+  background-color: snow;
+  padding: 0.7rem;
+}
+input {
+  width: 350px;
+  margin-left: 15px;
+
+}
+
+select {
+  width: 150px;
+  margin-left: 15px;
+}
+
+label {
+  margin-left: 5px
+}
+
+button, table {
+  margin-left: 15px;
+  margin-bottom: 55px
+}
+
+
+p {
+  opacity: 0.7;
+  display: grid;
+  justify-content: right;
+}

@@ -1,0 +1,56 @@
+nav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  align-content: stretch;
+  /*text-align: center*/
+}
+
+a {
+  /*margin-left: 200px;*/
+  font-size: 2.5rem;
+  color: black;
+  font-weight: bold;
+}
+
+a p {
+  border-radius: 10%;
+  color: navy;
+  font-size: 2rem;
+  text-align: right;
+  margin-right: .3rem;
+  width: max-content;
+  background-color: snow;
+  opacity: .7;
+  padding: .1rem 1.7rem;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: initial;
+  font-style: italic;
+}
+.active p{
+  color: firebrick;
+}
+
+div {
+  padding-bottom: 25px;
+}
+
+a span{
+  position: absolute;
+  top: 0;
+  left: 113px;
+  background-color: snow;
+  opacity: .7;
+  width: 18%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: initial;
+  font-style: italic;
+}
+
+a span img {
+  width: 40px;
+  opacity: 0.5;
+  margin-right: 10px;
+}

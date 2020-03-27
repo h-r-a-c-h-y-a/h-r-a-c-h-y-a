@@ -1,0 +1,8 @@
+@import "https://fonts.googleapis.com/css?family=Roboto&display=swap";
+
+body {
+  background-image: url("assets/image.jpg")
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

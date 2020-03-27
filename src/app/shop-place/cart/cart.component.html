@@ -1,0 +1,35 @@
+<div class="content">
+<table class="table table-striped">
+  <thead>
+  <td>Category</td>
+  <td>Name</td>
+  <td>Quantity</td>
+  <td>Price</td>
+  <th>Purchased</th>
+  <th></th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of items">
+  <td>{{item.category}}</td>
+  <td>{{item.name}}</td>
+  <td>{{item.quantity}}</td>
+  <td>{{item.price}}</td>
+  <td>{{(item.price * item.quantity) | number}}</td>
+  <br/>
+  </tr>
+  <tr style="padding-right: 1.5rem; font-size: 3.5rem; font-weight: bolder; text-align: right">
+    <td colspan="6" >Total</td>
+    <td style="padding-right: 1.5rem">{{sum | currency}}</td>
+  </tr>
+  </tbody>
+</table>
+  <div (click)="pay()" class="checkout">Checkout
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTlNKN4YHMBNenF43UrEgSkGRAFEcTH1qekWT5zxCobEMq37Icy">
+  </div>
+  <div class="container">
+    <h2>Stripe Checkout</h2>
+    <p>
+      Try it out using the card number <b>4242 4242 4242 4242</b>, a random three-digit CVC number, any expiration date in the future, and a random five-digit U.S. ZIP code.
+    </p>
+  </div>
+</div>

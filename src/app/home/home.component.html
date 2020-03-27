@@ -1,0 +1,16 @@
+<app-profile></app-profile>
+<div *ngIf="!inShop">
+  <nav><a  routerLink="/register" routerLinkActive="active"><p id="register">Registration</p></a>
+    <a  routerLink="/login" routerLinkActive="active"><p id="login">Login</p></a>
+    <a routerLink="/shop" routerLinkActive="active">
+      <span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRUMc5aElzG9tkyPmnvONXvcAn52TKNAIqYgf0EG_-7IvSZ7Qyw">
+        Shop Place</span></a>
+  </nav>
+</div>
+<router-outlet name='place'>
+  <router-outlet></router-outlet>
+</router-outlet>
+
+
+
+

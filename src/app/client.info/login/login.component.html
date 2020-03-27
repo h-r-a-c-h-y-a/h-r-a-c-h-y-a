@@ -1,0 +1,32 @@
+<div class="form-complect">
+  <div class="logErr" *ngIf="!success">
+    {{error}}
+  </div>
+  <form [formGroup]="loginForm" (ngSubmit)="logIn()" class="form-style">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input class="form-control" id="email" type="email" formControlName="email">
+      <div *ngIf="loginForm.controls.email.invalid && loginForm.controls.email.touched" class="invalid-field">
+        Invalid Email!<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Warning_icon.svg/420px-Warning_icon.svg.png">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input class="form-control" id="password" type="password" formControlName="password" #password>
+      <div *ngIf="loginForm.controls.password.invalid && loginForm.controls.password.touched" class="invalid-field">
+        Requirements: at least one lowercase character, at least one uppercase character, at least one
+        number, length min 8 character!<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Warning_icon.svg/420px-Warning_icon.svg.png">
+      </div>
+    </div>
+    <div >
+      <button type="submit" [disabled]="loginForm.invalid" class="btn btn-block btn-default" >Login</button>
+      <button routerLink="/register" class="btn btn-block btn-default" >Registration</button>
+      <div title="remember me after closing the tab" class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="defaultChecked2" checked>
+        <label class="custom-control-label" for="defaultChecked2">Remember me</label>
+      </div>
+    </div>
+    <p>or sign with</p>
+    <app-sign-with-social-pages></app-sign-with-social-pages>
+  </form>
+</div>
